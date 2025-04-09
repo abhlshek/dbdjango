@@ -47,3 +47,34 @@ class Bookshop(models.Model):
 
     def __str__(self):
         return "Book Name={0}, Subject={1}, Price={2} ".format( self.bookname,self.subject,self.price)
+    
+    
+    
+
+class Reader(models.Model):
+    bookname=models.ForeignKey(BookModel,on_delete=models.CASCADE)
+    
+    
+    def __str__(self):
+        return self.name
+    
+    #  new 
+    
+class Showroom(models.Model):
+    car=models.CharField(max_length=200)
+    bike=models.CharField(max_length=200)
+    
+    def __str__(self):
+        return "car={0},bike{1}".format(self.car,self.bike)
+
+
+
+
+
+class Union(models.Model):
+    accountno=models.IntegerField()
+    name=models.CharField(max_length=200)
+    balance=models.IntegerField()
+    
+    def __str__(self):
+        return "bank detail{0}".format(self.accountno,self.name,self.balance)

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    {% load static %}
+</head>
+<body>
+    <!-- <h1 style="color: maroon;">{{data}}</h1> -->
+    <!-- {{data}} -->
+    <table border="1">
+        <tr>
+            <th>bookname</th> 
+            <th>subject</th>
+            <th>price</th>
+        </tr>
+
+            {% for book in data %}
+       <tr>
+            <td>{{book.bookname}}</td>
+            <td>{{book.subject}}</td>
+            <td>{{book.price}}</td>
+
+        </tr>
+        
+        {% endfor %}
+    </table>
+<form>
+
+    <input type="text" name="book" value="{{bookname}}" placeholder="bookname">
+    <input type="submit" value="submit">
+
+</form>
+</body>
+</html>

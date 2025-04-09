@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{data}}
+    <table border="1">
+        <tr>
+            <th>car</th> 
+             <th>bike</th> 
+        </tr>
+
+            {% for book in data %}
+       <tr>
+            <td>{{book.car}}</td>
+            <td>{{book.bike}}</td>
+           
+
+
+        </tr>
+        
+        {% endfor %}
+    </table>
+    <form>
+        <input type="text" name="car" value="{{car}}" placeholder="car name">
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

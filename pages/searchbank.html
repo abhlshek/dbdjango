@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{result}}
+    {{data}}
+    {% for book in data %} {{book.accountno}} {{book.name}} {{book.balance}}
+    <br> {% endfor %}
+    <form>
+        <input type="text" name="accountno" value="{{accountno}}" placeholder="accountno">
+        <input type="text" name="name" value="{{name}}" placeholder="name">
+        <input type="text" name="balance" value="{{balance}}" placeholder="balance">
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
